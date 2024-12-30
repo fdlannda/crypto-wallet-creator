@@ -1,73 +1,73 @@
 # EVM Wallet Generator
 
-EVM Wallet Generator adalah sebuah skrip Python untuk membuat wallet Ethereum Virtual Machine (EVM) secara otomatis. Wallet dapat dibuat menggunakan private key atau seed phrase, dan hasilnya dapat disimpan dalam file CSV.
+The EVM Wallet Generator is a Python script designed to automatically generate Ethereum Virtual Machine (EVM) wallets. Wallets can be created using either private keys or seed phrases, and the results can be saved to a CSV file.
 
 ---
 
-## Fitur
+## Features
 
-- **Generate Wallet**:
-  - Menggunakan **Private Key**
-  - Menggunakan **Seed Phrase**
-- **Simpan Wallet** ke file CSV.
-- **Tampilkan Wallet** secara interaktif di terminal menggunakan Rich Table.
+- **Generate Wallets**:
+  - Using **Private Keys**
+  - Using **Seed Phrases**
+- **Save Wallets** to a CSV file.
+- **Display Wallets** interactively in the terminal using Rich Table.
 
 ---
 
-## Prasyarat
+## Prerequisites
 
-1. Python 3.x terinstal di komputer Anda.
-2. Instalasi pustaka yang dibutuhkan:
+1. Python 3.x installed on your computer.
+2. Required libraries:
    - `eth-account`
    - `rich`
 
-Instal pustaka menggunakan perintah berikut:
+Install the required libraries using the following command:
 ```bash
 pip install eth-account rich
 ```
 
 ---
 
-## Cara Menggunakan
+## How to Use
 
-1. Jalankan skrip Python:
+1. Run the Python script:
    ```bash
-   python <nama_file_skrip>.py
+   python <script_filename>.py
    ```
-2. Ikuti petunjuk di terminal untuk memilih metode pembuatan wallet:
-   - Ketik **1** untuk membuat wallet dengan private key.
-   - Ketik **2** untuk membuat wallet dengan seed phrase.
-3. Masukkan jumlah wallet yang ingin dibuat.
-4. Pilih apakah Anda ingin menyimpan hasilnya ke file CSV.
-5. Jika ya, masukkan nama file yang diinginkan (contoh: `wallets.csv`).
+2. Follow the terminal instructions to choose the wallet generation method:
+   - Type **1** to generate wallets with private keys.
+   - Type **2** to generate wallets with seed phrases.
+3. Enter the number of wallets you want to generate.
+4. Choose whether to save the results to a CSV file.
+5. If yes, specify the desired filename (e.g., `wallets.csv`).
 
 ---
 
-## Struktur File CSV
+## CSV File Structure
 
-File CSV yang dihasilkan akan memiliki kolom-kolom berikut:
+The generated CSV file will contain the following columns:
 
-### Jika menggunakan **Private Key**:
+### If generated with **Private Keys**:
 - **No**
-- **Address** (Alamat Wallet)
+- **Address** (Wallet Address)
 - **Private Key**
 
-### Jika menggunakan **Seed Phrase**:
+### If generated with **Seed Phrases**:
 - **No**
-- **Address** (Alamat Wallet)
+- **Address** (Wallet Address)
 - **Seed Phrase**
 
 ---
 
-## Contoh Output di Terminal
+## Example Terminal Output
 
 ```plaintext
-Selamat datang di EVM Wallet Generator!
-Pilih metode pembuatan wallet:
-[1] Dengan Private Key
-[2] Dengan Seed Phrase
-Masukkan pilihan Anda (1/2): 1
-Masukkan jumlah wallet yang ingin dibuat: 3
+Welcome to the EVM Wallet Generator!
+Choose the wallet generation method:
+[1] With Private Key
+[2] With Seed Phrase
+Enter your choice (1/2): 1
+Enter the number of wallets to generate: 3
 
 +----+------------------------------------------+------------------------------------------+
 | No | Address                                  | Private Key                              |
@@ -77,16 +77,16 @@ Masukkan jumlah wallet yang ingin dibuat: 3
 | 3  | 0xabcdefabcdefabcdefabcdefabcdefabcdef   | 0xabcdefabcdefabcdefabcdefabcdefabcdef |
 +----+------------------------------------------+------------------------------------------+
 
-Wallets berhasil disimpan ke file wallets.csv!
+Wallets successfully saved to wallets.csv!
 ```
 
 ---
 
-## Catatan Keamanan
-- **Jangan bagikan file CSV** yang berisi private key atau seed phrase kepada orang lain.
-- Pastikan file CSV disimpan di tempat yang aman.
+## Security Notes
+- **Do not share CSV files** containing private keys or seed phrases with anyone.
+- Ensure that the CSV file is stored in a secure location.
 
 ---
 
-## Lisensi
-Proyek ini bersifat open-source dan berada di bawah lisensi [MIT License](https://opensource.org/licenses/MIT).
+## License
+This project is open-source and licensed under the [MIT License](https://opensource.org/licenses/MIT).
